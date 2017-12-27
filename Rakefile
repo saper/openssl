@@ -17,7 +17,6 @@ end
 
 Rake::TestTask.new do |t|
   t.libs = ['test'] # Do not use our 'openssl.so' 
-  t.test_files = FileList['test/test_kdf.rb']
   t.warning = true
 end
 
