@@ -17,6 +17,7 @@ end
 
 Rake::TestTask.new do |t|
   t.libs = ['test'] # Do not use our 'openssl.so' 
+  t.test_files = FileList['test/test*.rb'].exclude(/test_cipher/)
   t.warning = true
 end
 
