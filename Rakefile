@@ -15,6 +15,13 @@ Rake::TestTask.new do |t|
   t.warning = true
 end
 
+Rake::TestTask.new do |t|
+  t.libs << 'test'
+  t.loader = 'direct'
+  t.test_files = FileList['test/pkcs5_abi.rb']
+  t.warning = true
+end
+
 RDoc::Task.new do |rdoc|
   rdoc.main = "README.md"
   rdoc.rdoc_files.include("*.md", "lib/**/*.rb", "ext/**/*.c")
